@@ -1,0 +1,24 @@
+
+@import "tailwindcss";
+:root {
+    --color-primary: #CA2C92;
+    --color-beige: #F6EFEA;
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+.text-primary {
+    color: var(--color-primary);
+}
+
+/* Small helper for image placeholders */
+.img-placeholder {
+    background-color: #f3e9e7;
+    border: 2px dashed rgba(0,0,0,0.06);
+}
+
+/* Base font for consistent mobile rendering */
+body {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
