@@ -1,24 +1,40 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import collections from "../data/collections.json";
 ---
+
 <Layout title="Inicio">
   <!-- Hero principal -->
   <section class="bg-beige-100 py-8 md:py-20">
-    <div class="container mx-auto max-w-7xl px-6 md:flex md:items-center md:gap-12">
+    <div
+      class="container mx-auto max-w-7xl px-6 md:flex md:items-center md:gap-12"
+    >
       <div class="md:w-1/2 text-center md:text-left">
-        <h1 class="text-2xl md:text-5xl font-semibold text-primary leading-tight">
+        <h1
+          class="text-2xl md:text-5xl font-semibold text-primary leading-tight"
+        >
           Moldea tu Cuerpo, Resalta tu Belleza
         </h1>
-        <p class="mt-4 text-gray-700 text-lg">Fajas Colombianas de Alta Calidad</p>
+        <p class="mt-4 text-gray-700 text-lg">
+          Fajas Colombianas de Alta Calidad
+        </p>
         <div class="mt-6 flex justify-center md:justify-start gap-4">
-          <button class="px-6 py-3 bg-primary text-white rounded-md shadow hover:opacity-95">Ver Colección</button>
-          <button class="px-6 py-3 border border-gray-300 rounded-md bg-white text-gray-700 hidden md:inline">Contacto</button>
+          <button
+            class="px-6 py-3 bg-primary text-white rounded-md shadow hover:opacity-95"
+            >Ver Colección</button
+          >
+          <button
+            class="px-6 py-3 border border-gray-300 rounded-md bg-white text-gray-700 hidden md:inline"
+            >Contacto</button
+          >
         </div>
       </div>
 
       <div class="md:w-1/2 mt-6 md:mt-0 flex justify-center md:justify-end">
         <!-- Placeholder para la imagen principal (colocar manualmente luego) -->
-        <div class="w-full max-w-xs h-56 md:w-96 md:h-96 rounded-lg img-placeholder flex items-center justify-center">
+        <div
+          class="w-full max-w-xs h-56 md:w-96 md:h-96 rounded-lg img-placeholder flex items-center justify-center"
+        >
           <span class="text-gray-400">Espacio para imagen</span>
         </div>
       </div>
@@ -45,45 +61,49 @@ import Layout from "../layouts/Layout.astro";
 
   <!-- Colecciones -->
   <section class="container mx-auto px-6 py-10">
-    <h2 class="text-2xl text-center font-medium text-gray-700">Nuestras Colecciones</h2>
+    <h2 class="text-2xl text-center font-medium text-gray-700">
+      Nuestras Colecciones
+    </h2>
 
-    <div class="mt-6 flex justify-center gap-3">
-      <button class="px-4 py-2 bg-primary text-white rounded-md">Uso Diario</button>
-      <button class="px-4 py-2 border border-gray-200 rounded-md">Postquirúrgicas</button>
-      <button class="px-4 py-2 border border-gray-200 rounded-md">Deportivas</button>
+    <div class="mt-6 justify-center gap-3 grid grid-cols-1 md:grid-cols-3">
+      {
+        Object.entries(collections).map(([slug, data]) => (
+          <a
+            href={`/categoria/${slug}`}
+            class="px-4 py-2 border bg-primary border-gray-200 rounded-md hover:bg-primary hover:text-white"
+          >
+            {data.title}
+          </a>
+        ))
+      }
     </div>
 
-    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Card 1 -->
-      <article class="bg-white rounded-lg overflow-hidden shadow">
-        <div class="h-56 img-placeholder flex items-center justify-center">
-          <span class="text-gray-400">Imagen - Uso Diario</span>
-        </div>
-        <div class="p-4 bg-rose-50">
-          <h3 class="text-lg font-medium">Uso Diario</h3>
-        </div>
-      </article>
+    <section class="container mx-auto px-6 py-10">
+      <h2 class="text-2xl text-center font-medium text-gray-700">
+        Nuestras Colecciones
+      </h2>
 
-      <!-- Card 2 -->
-      <article class="bg-white rounded-lg overflow-hidden shadow">
-        <div class="h-56 img-placeholder flex items-center justify-center">
-          <span class="text-gray-400">Imagen - Postquirúrgicas</span>
-        </div>
-        <div class="p-4 bg-rose-50">
-          <h3 class="text-lg font-medium">Postquirúrgicas</h3>
-        </div>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="bg-white rounded-lg overflow-hidden shadow">
-        <div class="h-56 img-placeholder flex items-center justify-center">
-          <span class="text-gray-400">Imagen - Deportivas</span>
-        </div>
-        <div class="p-4 bg-rose-50">
-          <h3 class="text-lg font-medium">Deportivas</h3>
-        </div>
-      </article>
-    </div>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        {
+          Object.entries(collections).map(([slug, data]) => (
+            <article class="bg-white rounded-lg overflow-hidden shadow">
+              <div class="h-56 flex items-center justify-center bg-gray-100">
+                <span class="text-gray-400">Imagen - {data.title}</span>
+              </div>
+              <div class="p-4 bg-rose-50">
+                <h3 class="text-lg font-medium">{data.title}</h3>
+                <a
+                  href={`/categoria/${slug}`}
+                  class="mt-2 inline-block px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/80"
+                >
+                  Ver colección
+                </a>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
   </section>
 
   <!-- Calculadora de tallas CTA -->
@@ -92,20 +112,31 @@ import Layout from "../layouts/Layout.astro";
       <h3 class="text-xl font-medium">Encuentra tu Talla Ideal</h3>
       <p class="text-gray-600 mt-2">Calculadora de tallas rápida y sencilla</p>
       <div class="mt-6">
-        <button class="px-6 py-3 bg-amber-200 text-gray-800 rounded-md">Calculadora de Tallas</button>
+        <button class="px-6 py-3 bg-amber-200 text-gray-800 rounded-md"
+          >Calculadora de Tallas</button
+        >
       </div>
     </div>
   </section>
 
   <!-- Testimonial -->
   <section class="container mx-auto px-6 py-10">
-    <h3 class="text-lg font-medium text-center">Lo que dicen nuestras clientas</h3>
-    <div class="mt-6 max-w-3xl mx-auto bg-white rounded-lg shadow p-6 flex flex-col md:flex-row items-center gap-6">
-      <div class="w-24 h-24 rounded-full img-placeholder flex items-center justify-center">
+    <h3 class="text-lg font-medium text-center">
+      Lo que dicen nuestras clientas
+    </h3>
+    <div
+      class="mt-6 max-w-3xl mx-auto bg-white rounded-lg shadow p-6 flex flex-col md:flex-row items-center gap-6"
+    >
+      <div
+        class="w-24 h-24 rounded-full img-placeholder flex items-center justify-center"
+      >
         <span class="text-gray-400">Foto</span>
       </div>
       <div class="flex-1">
-        <p class="text-gray-700">“Me encantan estas fajas! Sos súper cómodas y realmente ayudan a moldear mi figura.”</p>
+        <p class="text-gray-700">
+          “Me encantan estas fajas! Sos súper cómodas y realmente ayudan a
+          moldear mi figura.”
+        </p>
         <p class="mt-3 text-right text-sm text-gray-500">- Laura M.</p>
       </div>
     </div>

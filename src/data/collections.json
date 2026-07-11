@@ -1,0 +1,101 @@
+{
+  "shorts-levanta-cola": {
+    "title": "Shorts Levanta Cola",
+    "items": [
+      {
+        "name": "Short Levanta Cola 1",
+        "description": "Short con realce natural para glúteos.",
+        "image": "short_levanta1.jpg",
+        "whatsappLink": "https://wa.me/+593963101820?text=Hola,%20quiero%20el%20Short%20Levanta%20Cola%201"
+      }
+    ]
+  },
+  "shorts-invisibles": {
+    "title": "Shorts Invisibles",
+    "items": [
+      {
+        "name": "Short Invisible 1",
+        "description": "Short sin costuras, ideal para ropa ajustada.",
+        "image": "short_invisible1.jpg",
+        "whatsappLink": "https://wa.me/+593963101820?text=Hola,%20quiero%20el%20Short%20Invisible%201"
+      }
+    ]
+  },
+  "cinturillas-chalecos": {
+    "title": "Cinturillas y Chalecos",
+    "items": [
+      {
+        "name": "Cinturilla 1",
+        "description": "Cinturilla reductora con soporte lumbar.",
+        "image": "cinturilla1.jpg",
+        "whatsappLink": "https://wa.me/+593963101820?text=Hola,%20quiero%20la%20Cinturilla%201"
+      }
+    ]
+  },
+  "fajas-body": {
+    "title": "Fajas Body",
+    "items": [
+      {
+        "name": "Faja Body 1",
+        "description": "Faja completa tipo body para moldear la figura.",
+        "image": "body1.jpg",
+        "whatsappLink": "https://wa.me/+593963101820?text=Hola,%20quiero%20la%20Faja%20Body%201"
+      }
+    ]
+  },
+  "fajas-uso-diario": {
+    "title": "Fajas Uso Diario",
+    "items": [
+      {
+        "name": "Faja Uso Diario 1",
+        "description": "Faja ligera para uso cotidiano.",
+        "image": "uso_diario1.jpg",
+        "whatsappLink": "https://wa.me/+593963101820?text=Hola,%20quiero%20la%20Faja%20Uso%20Diario%201"
+      }
+    ]
+  },
+  "fajas-post-quirurgicas": {
+    "title": "Fajas Post-Quirúrgicas",
+    "items": [
+      {
+        "name": "Faja Post-Quirúrgica 1",
+        "description": "Faja diseñada para recuperación post-operatoria.",
+        "image": "post_quirurgica1.jpg",
+        "whatsappLink": "https://wa.me/+593963101820?text=Hola,%20quiero%20la%20Faja%20Post-Quirúrgica%201"
+      }
+    ]
+  },
+  "brasieres-accesorios-postquirurgicos": {
+    "title": "Brasieres y Accesorios Postquirúrgicos",
+    "items": [
+      {
+        "name": "Brasier Postquirúrgico 1",
+        "description": "Brasier de soporte para recuperación postquirúrgica.",
+        "image": "brasier1.jpg",
+        "whatsappLink": "https://wa.me/+593963101820?text=Hola,%20quiero%20el%20Brasier%20Postquirúrgico%201"
+      }
+    ]
+  },
+  "tablas-abdominales-accesorios": {
+    "title": "Tablas Abdominales y Accesorios",
+    "items": [
+      {
+        "name": "Tabla Abdominal 1",
+        "description": "Tabla abdominal para moldear y dar soporte.",
+        "image": "tabla1.jpg",
+        "whatsappLink": "https://wa.me/+593963101820?text=Hola,%20quiero%20la%20Tabla%20Abdominal%201"
+      }
+    ]
+  },
+  "fajas-post-partos": {
+    "title": "Fajas Post Partos",
+    "items": [
+      {
+        "name": "Faja Post Parto 1",
+        "description": "Faja diseñada para recuperación post parto.",
+        "image": "post_parto1.jpg",
+        "whatsappLink": "https://wa.me/+593963101820?text=Hola,%20quiero%20la%20Faja%20Post%20Parto%201"
+      }
+    ]
+  }
+}
